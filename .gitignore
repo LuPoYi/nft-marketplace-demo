@@ -44,5 +44,5 @@ cache
 artifacts
 
 .secret
-.infuraid
+.infuraId
 config.js

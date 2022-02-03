@@ -1,8 +1,7 @@
 require('@nomiclabs/hardhat-waffle')
 const fs = require('fs')
 const privateKey = fs.readFileSync('.secret').toString()
-// TODO: hide in source code
-const projectId = '6ed99282e4f848fca21f3933131e1d3a'
+const infuraId = fs.readFileSync('.infuraId').toString()
 
 module.exports = {
   networks: {
@@ -10,11 +9,11 @@ module.exports = {
       chainId: 1337,
     },
     mumbai: {
-      url: `https://polygon-mumbai.infura.io/v3/${projectId}`,
+      url: `https://polygon-mumbai.infura.io/v3/${infuraId}`,
       accounts: [privateKey],
     },
     mainnet: {
-      url: `https://polygon-mainnet.infura.io/v3/${projectId}`,
+      url: `https://polygon-mainnet.infura.io/v3/${infuraId}`,
       accounts: [privateKey],
     },
   },
